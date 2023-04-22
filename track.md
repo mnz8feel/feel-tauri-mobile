@@ -8,3 +8,6 @@ $ create-tauri-app --mobile --alpha
 ✔ Choose your UI template · React - (https://reactjs.org/)
 ✔ Choose your UI flavor · TypeScript
 ```
+
+`pnpm i`
+`pnpm tauri android init`

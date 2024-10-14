@@ -16,9 +16,9 @@ $ create-tauri-app --mobile --alpha
 
 `pnpm tauri android dev` 第一次执行会下载一些东西，需要注意网络情况，有些错误是网络原因
 
-### 错误
+## 错误
 
-`Error Failed to create a symbolic link from`
+### `Error Failed to create a symbolic link from`
 
 ```
 Creation symbolic link is not allowed for this system.
@@ -36,7 +36,24 @@ See https://docs.microsoft.com/en-us/windows/security/threat-protection/security
 遇到错误，开启 Windows 开发者模式
 Windows 搜索 Developer Mode
 
-[Exception in thread "main" java.util.zip.ZipException: zip END header not found](https://stackoverflow.com/questions/73168883/exception-in-thread-main-java-util-zip-zipexception-zip-end-header-not-found)
+### [Exception in thread "main" java.util.zip.ZipException: zip END header not found](https://stackoverflow.com/questions/73168883/exception-in-thread-main-java-util-zip-zipexception-zip-end-header-not-found)
+
+### `Exception in thread "main" java.io.IOException: Downloading from https://services.gradle.org/distributions/gradle-8.9-bin.zip failed: timeout`
+
+设置代理 `src-tauri\gen\android\gradle.properties`
+
+```
+systemProp.https.proxyHost=127.0.0.1
+systemProp.https.proxyPort=7890
+systemProp.http.proxyHost=127.0.0.1
+systemProp.http.proxyPort=7890
+```
+
+### `error sending request for url`
+
+`"beforeDevCommand": "pnpm dev --host"`
+
+[[bug] error sending request for url (http://192.168.0.x:1420/) on iOS](https://github.com/tauri-apps/tauri/issues/9509)
 
 ## version
 

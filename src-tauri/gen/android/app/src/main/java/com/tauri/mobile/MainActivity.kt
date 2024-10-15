@@ -1,3 +1,3 @@
-package com.tauri.dev
+package com.tauri.mobile
 
 class MainActivity : TauriActivity()

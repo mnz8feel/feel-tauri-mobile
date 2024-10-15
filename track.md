@@ -40,13 +40,20 @@ Windows 搜索 Developer Mode
 
 ### `Exception in thread "main" java.io.IOException: Downloading from https://services.gradle.org/distributions/gradle-8.9-bin.zip failed: timeout`
 
-设置代理 `src-tauri\gen\android\gradle.properties`
+方式 1：设置代理 `src-tauri\gen\android\gradle.properties`
 
 ```
 systemProp.https.proxyHost=127.0.0.1
 systemProp.https.proxyPort=7890
 systemProp.http.proxyHost=127.0.0.1
 systemProp.http.proxyPort=7890
+```
+
+方式 2：手动下载文件后改成本地地址 `gradle\wrapper\gradle-wrapper.properties`
+
+```
+# distributionUrl=https\://services.gradle.org/distributions/gradle-8.9-bin.zip
+distributionUrl=file\:/D:/zone/gradle-8.9-bin.zip
 ```
 
 ### `error sending request for url`

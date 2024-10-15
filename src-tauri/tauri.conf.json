@@ -1,7 +1,7 @@
 {
   "productName": "feel-tauri-mobile",
-  "version": "0.0.0",
-  "identifier": "com.tauri.dev",
+  "version": "0.0.1",
+  "identifier": "com.tauri.mobile",
   "build": {
     "beforeDevCommand": "pnpm dev --host",
     "devUrl": "http://localhost:11420",

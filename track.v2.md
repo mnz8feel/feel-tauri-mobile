@@ -11,3 +11,11 @@ modify tauri.conf.json by [Upgrade from Tauri 1.0](https://v2.tauri.app/zh-cn/st
 rm -rf gen/android and `pnpm tauri android init`
 
 modify src\App.tsx by [Upgrade from Tauri 1.0](https://v2.tauri.app/zh-cn/start/migrate/from-tauri-1/)
+
+### build
+
+modify tauri.conf.json identifier
+
+rm -rf gen/android and `pnpm tauri android init`
+
+modify tauri.conf.json version must be at least `0.0.1`.

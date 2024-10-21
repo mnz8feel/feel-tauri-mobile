@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schema.tauri.app/config/2",
   "productName": "feel-tauri-mobile",
   "version": "0.0.1",
   "identifier": "com.tauri.mobile",
@@ -14,24 +15,18 @@
     },
     "windows": [
       {
-        "fullscreen": false,
-        "resizable": true,
         "title": "feel-tauri-mobile",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "fullscreen": false,
+        "resizable": true
       }
     ]
   },
   "bundle": {
     "active": true,
-    "icon": [
-      "icons/32x32.png",
-      "icons/128x128.png",
-      "icons/128x128@2x.png",
-      "icons/icon.icns",
-      "icons/icon.ico"
-    ],
-    "targets": "all"
+    "targets": "all",
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"]
   },
   "plugins": {
     "updater": {

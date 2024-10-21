@@ -1,4 +1,5 @@
-[build]
-target = 'x86_64-pc-windows-msvc'
+# 暂时不需要配置，都交给 tauri 处理
+# [build]
+# target = 'x86_64-pc-windows-msvc'
 
-[target]
+# [target]

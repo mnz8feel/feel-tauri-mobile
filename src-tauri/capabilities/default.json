@@ -2,9 +2,15 @@
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
   "description": "Capability for the main window",
-  "windows": ["main"],
+  "windows": [
+    "main"
+  ],
   "permissions": [
-    "core:default",
-    "shell:allow-open"
+    "core:app:allow-name",
+    "core:app:allow-version",
+    "core:app:allow-tauri-version",
+    "core:path:allow-resolve-directory",
+    "os:allow-hostname",
+    "os:allow-locale"
   ]
 }

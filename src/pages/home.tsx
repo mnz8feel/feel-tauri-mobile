@@ -4,8 +4,7 @@ import { invoke } from '@tauri-apps/api/core';
 import { getName, getVersion, getTauriVersion } from '@tauri-apps/api/app';
 import { appConfigDir } from '@tauri-apps/api/path';
 import { arch, eol, exeExtension, family, hostname, locale, platform, type, version } from '@tauri-apps/plugin-os';
-import reactLogo from './assets/react.svg';
-import './App.css';
+import reactLogo from '../assets/react.svg';
 
 function App() {
   const [greetMsg, setGreetMsg] = useState('');

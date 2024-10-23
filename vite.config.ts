@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import UnoCSS from 'unocss/vite';
 import type { BuildOptions } from 'vite';
 
 const host = process.env.TAURI_DEV_HOST;
 const minify: BuildOptions['minify'] = !process.env.TAURI_DEBUG ? 'esbuild' : false;
 
 export default defineConfig(async () => ({
-  plugins: [react()],
+  plugins: [UnoCSS(), react()],
   clearScreen: false,
   server: {
     host: host || false,

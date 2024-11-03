@@ -8,6 +8,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "tauri": "tauri",
+    "dev:f": "vite --host",
+    "dev:d": "tauri dev",
+    "dev:a": "tauri android dev",
     "clear": "sh ./clear.sh"
   },
   "dependencies": {

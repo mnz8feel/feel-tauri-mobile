@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "identifier": "com.tauri.mobile",
   "build": {
-    "beforeDevCommand": "pnpm dev --host",
     "devUrl": "http://localhost:11420",
     "beforeBuildCommand": "pnpm build",
     "frontendDist": "../dist"

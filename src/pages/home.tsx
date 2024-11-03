@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useAsyncEffect } from 'ahooks';
 import { invoke } from '@tauri-apps/api/core';
 import { getName, getVersion, getTauriVersion } from '@tauri-apps/api/app';
-import { appConfigDir } from '@tauri-apps/api/path';
 import { arch, eol, exeExtension, family, hostname, locale, platform, type, version } from '@tauri-apps/plugin-os';
 import reactLogo from '../assets/react.svg';
 
@@ -17,11 +16,9 @@ function App() {
   }
 
   useAsyncEffect(async () => {
-    console.log('useAsyncEffect arch', arch);
     const appName = await getName();
     const appVersion = await getVersion();
     const tauriVersion = await getTauriVersion();
-    const appConfigDirPath = await appConfigDir();
     const archName = arch();
     const eolMarker = eol();
     const exeExt = exeExtension();
@@ -35,7 +32,6 @@ function App() {
       appName,
       appVersion,
       tauriVersion,
-      appConfigDirPath,
       archName,
       eolMarker,
       exeExt,
@@ -48,24 +44,20 @@ function App() {
     });
   }, []);
 
-  console.log('info', info);
-
   return (
-    <div className="container">
+    <div>
       <h1>Welcome to Tauri!</h1>
-
-      <div className="row">
+      <div>
         <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
+          <img src="/vite.svg" alt="Vite logo" w-10 h-10 />
         </a>
         <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
+          <img src="/tauri.svg" alt="Tauri logo" w-10 h-10 />
         </a>
         <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={reactLogo} alt="React logo" w-10 h-10 />
         </a>
       </div>
-
       <table>
         <tbody>
           <tr>
@@ -79,10 +71,6 @@ function App() {
           <tr>
             <td>tauri version</td>
             <td>{info?.tauriVersion}</td>
-          </tr>
-          <tr>
-            <td>appConfigDirPath</td>
-            <td>{info?.appConfigDirPath}</td>
           </tr>
           <tr>
             <td>archName</td>
